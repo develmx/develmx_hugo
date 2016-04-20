@@ -73,9 +73,32 @@ theme = "hugo-creative-theme"
             description = "Desarrollamos experiencias moviles para satisfacer a sus clientes."
 
         [[params.services.list]]
-            icon = "fa-television"
-            title = "Interactivo"
-            description = "Creamos experiencias en Activaciones desde multitouch, hasta accionadas con Kinekt!"
+            icon = "fa-headphones"
+            title = "Diseño de Audio"
+            description = "Con un equipo de productores especializados en crear los mejores sonidos!"
+
+        [[params.services.list]]
+            icon = "fa-video-camera"
+            title = "Kinect"
+            description = "Integramos las tecnologias mas modernas de vision para crear experiencias de sus clientes."
+
+        [[params.services.list]]
+            icon = "fa-twitter"
+            title = "Experiencias en Redes Sociales"
+            description = "Diseñamos y creamos experiencias en redes sociales."
+
+        [[params.services.list]]
+            icon = "fa-google"
+            title = "Implementacion de tecnologias de Google"
+            description = "Integramos cualquier API de google."
+
+        [[params.services.list]]
+            icon = "fa-gamepad"
+            title = "Juegos"
+            description = "En diferentes tipos de interacciones como 2D, 3D, Moviles, En escritorio, Web, para activaciones, con Oculus Rift."
+
+
+
 
 
     # Portfolio modals
