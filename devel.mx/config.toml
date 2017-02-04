@@ -1,124 +1,100 @@
 baseurl = "http://develmx.github.io/"
 languageCode = "en-us"
 title = "Devel.MX"
+# Enable comments by entering your Disqus shortname
+disqusShortname = "spf13"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+# Define the number of posts per page
+paginate = 10
+footnotereturnlinkcontents = "↩"
+theme = "hugo-icarus-theme"
 
-theme = "hugo-creative-theme"
+
+[permalinks]
+    post = "/:year/:month/:day/:slug"
+
 
 [params]
+    # Tell me who you are
+    author = "John Doe"
+    bio = "Blogger - Programmer - Gopher"
+    location = "Earth"
+    site_description = ""
+    copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
+    avatar = "css/images/avatar.png"
+    logo = "css/images/logo.png"
+    disable_mathjax = false # set to true to disable MathJax
 
-	# You can use Markdown syntax for urls [text](//url.to/source) for
-	# most longer texts.
+    # Format dates with Go's time formatting
+    date_format = "2006-01-02"
 
-	# All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
-	# for more icons. The icons are represented by their corresponding
-	# CSS class.
+    # Add custom assets with their paths relative to the static folder
+	custom_css = []
+	custom_js  = []
 
-	# All projects of the portfolio are defined in their own files.
-	# You can find example projects at 'exampleSite/data/projects'. Copy the 'projects'
-	# folder into the 'data' directory at the root of this Hugo site.
-	# For more informtion take a look at the README.
+# Create custom menu entries by defining a label and a link for
+# them. Since you can also link posts, you've the option the
+# place the links before or after them.
+#
+# E.g.: "Home" appears before all linked posts in the menu
+# and "Tags" / "Categories" after them.
+[[params.menu]]
+    before = true
+    label  = "Home"
+    link   = "/"
 
-	# To provide some metadata for search engines feel free to add a few
-    # information about you and your website.
-	name = "Your name"
-	description = "Your description"
+[[params.menu]]
+    before = false
+    label  = "Tags"
+    link   = "tags/"
 
-	# The path must be relative to the static folder
-	favicon = "favicon.ico"
+[[params.menu]]
+    before = false
+    label  = "Categories"
+    link   = "categories/"
 
-
-	# Navigation
-	[params.navigation]
-		brand = "devel.mx"
-
-		[params.navigation.links]
-			about     = "Sobre nosotros"
-			services  = "Servicios"
-			portfolio = "Portafolios"
-			contact   = "Contacto"
-
-
-	# Hero section
-	[params.hero]
-		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
-		slogan     = "Inovando en tu camino"
-		subtitle   = "Saludos. Haz llegado al lugar indicado. Nuestro trabajo es hacer convertir las ideas mas raras en productos."
-		buttonText = "Descubre por que?"
-
-
-	# About section
-	[params.about]
-		headline    = "Desarrollamos casi cualquier tecnologia."
-		description = "Nos orgullesemos en haber creado algunas de las ideas inovacion con las tecnologias mas recientes del mundo. Vemos las nuevas tecnologias como Juguetes y nos encanta jugar con ellas hasta descubir hasta donde pueden llegar."
-		buttonText  = "Involucrate!"
+# Enter a link for the follow button on the left
+[params.profile]
+    follow_button = "https://github.com/digitalcraftsman"
 
 
-	# Service section
-	[params.services]
-		headline = "A tus servicios"
+[social]
+# Add your social network accounts to the profile section on the left
+# by entering your username. The links to your account will be
+# created automatically.
+    github          = "digitalcraftsman"
+    gitlab          = ""
+    bitbucket       = ""
+    jsfiddle        = ""
+    codepen         = ""
+    foursquare      = ""
+    dribbble        = ""
+    deviantart      = ""
+    behance         = ""
+    flickr          = ""
+    instagram       = ""
+    youtube         = ""
+    vimeo           = ""
+    vine            = ""
+    medium          = ""
+    wordpress       = ""
+    tumblr          = ""
+    xing            = ""
+    linkedin        = ""
+    slideshare      = ""
+    stackoverflow   = ""
+    reddit          = ""
+    pinterest       = ""
+    googleplus      = ""
+    facebook        = ""
+    facebook_admin  = ""
+    twitter_domain  = ""
+    twitter         = "spf13"
 
-        [[params.services.list]]
-            icon = "fa-html5"
-            title = "HTML5"
-            description = "Creamos experiencias completas utilizando al maximo la habilidad de los navegadores."
-
-        [[params.services.list]]
-			icon = "fa-mobile"
-			title = "iOS"
-			description = "Aplicaciones a la medida de tu iPhone o iPad!"
-
-		[[params.services.list]]
-            icon = "fa-android"
-            title = "Android"
-            description = "Desarrollamos experiencias moviles para satisfacer a sus clientes."
-
-        [[params.services.list]]
-            icon = "fa-headphones"
-            title = "Diseño de Audio"
-            description = "Con un equipo de productores especializados en crear los mejores sonidos!"
-
-        [[params.services.list]]
-            icon = "fa-video-camera"
-            title = "Kinect"
-            description = "Integramos las tecnologias mas modernas de vision para crear experiencias de sus clientes."
-
-        [[params.services.list]]
-            icon = "fa-twitter"
-            title = "Experiencias en Redes Sociales"
-            description = "Diseñamos y creamos experiencias en redes sociales."
-
-        [[params.services.list]]
-            icon = "fa-google"
-            title = "Implementacion de tecnologias de Google"
-            description = "Integramos cualquier API de google."
-
-        [[params.services.list]]
-            icon = "fa-gamepad"
-            title = "Juegos"
-            description = "En diferentes tipos de interacciones como 2D, 3D, Moviles, En escritorio, Web, para activaciones, con Oculus Rift."
-
-
-
-
-
-    # Portfolio modals
-	[params.portfolio.modal]
-        client = "Client"
-        date = "Date"
-        category = "Category"
-        buttonText = "Close"
-
-    # Aside section
-	[params.aside]
-		headline = "Conoce nuestro perfil"
-
-		[params.aside.button]
-			text = "Visitalo"
-			link = "//github.com/develmx"
-
-	# Contact section
-	[params.contact]
-		headline = "Contactanos!"
-		description = "Listos para inicar tu siguiente proyecto con nosotros? Eso es genial! Marcanos o mandanos un correo y nos pondremos en contacto."
-		phone = "5530107735"
-		email = "jose@ngel.es"
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    recent_articles = true
+    categories = true
+    tags = true
+    tag_cloud = true
