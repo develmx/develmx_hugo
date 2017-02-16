@@ -3,11 +3,11 @@ categories = ["Seguridad"]
 tags = ["passwords"]
 images = []
 date = "2017-02-04T23:41:17-06:00"
-title = "Las peores conraseñas del 2016"
+title = "Las peores contraseñas del 2016"
 banner = "images/2016-passwords.jpg"
 menu = ""
 description = ""
-
+slug = "las-peores-conraseñas-del-2016"
 +++
 
 En el 2007 se decía que el 1% de la población era dueña del 35% de [Estados Unidos](https://en.wikipedia.org/wiki/Wealth_inequality_in_the_United_States). Es poco común que existan estas disparidades tan exageradas en muchas áreas pero hoy hablaremos de una donde mucho menos del 1% del Universo de Búsqueda afecta el 50%. 
