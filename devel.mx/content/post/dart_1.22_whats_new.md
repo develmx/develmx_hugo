@@ -8,27 +8,26 @@ categories = ["Dart"]
 tags = ["news"]
 images = []
 slug = "actualización-a-dart-1_22"
-draft = true
+draft = false
 +++
 ( Post traducido de http://news.dartlang.org/2017/02/dart-122-faster-tools-assert-messages.html )
 
-Como caracteristica de un lenguage vivo, de vez en cuando un lenguage tiene modificaciones que mejoran la calidad del lenguage
+Como característica de un lenguaje vivo, de vez en cuando un lenguage tiene modificaciones que mejoran la calidad del lenguaje
 
-## Inicio mas rapidio de herramientass
-Los archivos compilados de Dart tienen la peculiaridad de inicar mucho muy rapido por que tienen implementada una funcionalidad llamada _snapshots_,
-la cual consiste en que el estado inicial de la aplicacion queda en el compilado al inicio del coidgo asi al leerlo por el interprete automaticamente puede inicar la ejecucion.
+## Inicio más rápido de herramientas 
+Los archivos compilados de Dart tienen la peculiaridad de inicar mucho muy rápido porque tienen implementada una funcionalidad llamada _snapshots_, la cual consiste en que el estado inicial de la aplicación queda en el compilado al inicio del codigo asi al leerlo por el intérprete automáticamente puede iniciar la ejecución. 
  
-Y ahora han portado esta funcionalidad para las herramientas del SDK como el dart2js, el analyzer, y el pub. Y el resultado es increible.
+Y ahora han portado esta funcionalidad para las herramientas del SDK como el dart2js, el analyzer, y el pub. Y el resultado es increíble.
  
-Comparacion de los tiempo despues de la mejora:
+Comparación de los tiempo después de la mejora:
 ![alt text](/images/chart001.png "Chart de las mejoras")
 
 [![Mas informacion sobre AOT compilling](http://img.youtube.com/vi/lqE4u8s8Iik/0.jpg)](http://www.youtube.com/watch?v=lqE4u8s8Iik)
 
-## Mensages de Assert
+## Mensajes de Assert
 El principio de falla rapido es fundamental para hacer software de alta calidad y en dart, [Assert](https://www.dartlang.org/guides/language/language-tour#assert) 
-es la mejor manera de falllar rapido. Pero hasta ahora no era posible agregar un mensage a los aserts, al menos que se tubieran que hacer una secuencia de `Throw` errors
-pero ahora son mucho mas faciles, como se puede ver a continuacion:
+es la mejor manera de fallar rápido. Pero hasta ahora no era posible agregar un mensaje a los aserts, al menos que se tuvieran que hacer una secuencia de `Throw` errors
+pero ahora son mucho más fáciles, como se puede ver a continuación:
 
 ```javascript
 num measureDistance(List<Place> waypoints) {
@@ -38,12 +37,12 @@ num measureDistance(List<Place> waypoints) {
 }
 ```
 
-Y lo mejor al momento ejecutar en produccion los Asserts no son evaluados lo que hace el proceso mas rapido
+Y lo mejor al momento ejecutar en producción los Asserts no son evaluados lo que hace el proceso más rápido
 ![Asert Covariant example](/images/realease-1.22.gif "Asert Covariant example")
 
 ## El tipo `Null` ahora es un subtipo de cualquier tipo de datos
  
-Osea se a modido el Tipo `Null` a la base de la jerarquia de todas las clases. Antes el `null` estaba en el fondo de los tipos ahora la clase `Null` tambien.
+Osea se a movido el Tipo `Null` a la base de la jerarquía de todas las clases. Antes el `null` estaba en el fondo de los tipos ahora la clase `Null` también.
 
 ```javascript
 final empty = <Null>[];
@@ -55,4 +54,4 @@ concatenate(empty); // OK.
 sum(empty); // OK.
 ```
 
-Y mas cambios que se pueden consultar en el post original.
+Y mÁs cambios que se pueden consultar en el post original.
